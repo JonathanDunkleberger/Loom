@@ -9,7 +9,6 @@ import WelcomePageImage3 from "../images/WelcomePageImage3.png";
 import WelcomePageImage4 from "../images/WelcomePageImage4.png";
 import WelcomePageBanner from "../images/WelcomePageBanner.jpg";
 
-import { Fade } from "react-reveal";
 import { Link } from "react-router-dom";
 
 function Welcome() {
@@ -29,7 +28,7 @@ function Welcome() {
       >
         <div className="grid content-center justify-center h-full justify-items-center">
           <div className="w-10/12 text-center sm:w-11/12 md:w-40rem">
-            <Fade duration={2000}>
+              <>
               <h1 className="mb-3 text-3xl font-semibold text-center text-white sm:text-4xl md:text-6xl">
                 Unlimited movies, TV shows and more.
               </h1>
@@ -51,7 +50,7 @@ function Welcome() {
                   </button>
                 </Link>
               </div>
-            </Fade>
+            </>
           </div>
         </div>
         <div
@@ -64,7 +63,7 @@ function Welcome() {
 
       {/* Section 2 */}
       <section className="bg-black border-y-8 border-y-zinc-800">
-        <Fade>
+        
           <div className="flex justify-center md:py-8">
             <div className="lg:flex lg:items-center lg:w-9/12">
               <div>
@@ -81,12 +80,11 @@ function Welcome() {
               </div>
             </div>
           </div>
-        </Fade>
       </section>
 
       {/* Section 3 */}
       <section className="bg-black">
-        <Fade>
+        
           <div className="flex justify-center">
             <div className="flex flex-col-reverse lg:flex-row lg:items-center lg:w-9/12">
               <div className="flex justify-center">
@@ -103,12 +101,11 @@ function Welcome() {
               </div>
             </div>
           </div>
-        </Fade>
       </section>
 
       {/* Section 4 */}
       <section className="bg-black border-y-8 border-y-zinc-800">
-        <Fade>
+        
           <div className="flex justify-center md:py-8">
             <div className="lg:flex lg:items-center lg:w-9/12">
               <div>
@@ -125,7 +122,6 @@ function Welcome() {
               </div>
             </div>
           </div>
-        </Fade>
       </section>
 
       {/* Section 5 */}

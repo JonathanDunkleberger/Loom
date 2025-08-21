@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useContext } from "react";
 
 import { Transition } from "@headlessui/react";
-import { Fade } from "react-reveal";
 import { Link, useNavigate } from "react-router-dom";
 import { getAuth, signOut } from "firebase/auth";
 import { AuthContext } from "../../Context/UserContext";
@@ -52,7 +51,6 @@ function Navbar(props) {
   };
 
   return (
-    <Fade>
       <header
         className={
           props.playPage
@@ -308,7 +306,6 @@ function Navbar(props) {
           </Transition>
         </nav>
       </header>
-    </Fade>
   );
 }
 

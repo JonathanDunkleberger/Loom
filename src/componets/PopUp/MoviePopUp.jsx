@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useContext } from "react";
-import { Fade } from "react-reveal";
 import StarRatings from "react-star-ratings";
-import { imageUrl } from "../../Constants/Constance";
+import { imageUrl } from "../../Constants/Constants";
 import { PopUpContext } from "../../Context/moviePopUpContext";
 import useUpdateMylist from "../../CustomHooks/useUpdateMylist";
 import usePlayMovie from "../../CustomHooks/usePlayMovie";
@@ -32,7 +31,6 @@ function MoviePopUp(props) {
           <div className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
             <div className="relative w-auto mt-24 sm:my-6 mx-4 max-w-3xl">
               {/*content*/}
-              <Fade bottom duration={500}>
                 <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-neutral-800 outline-none focus:outline-none">
                   {/*header*/}
                   <button
@@ -123,72 +121,66 @@ function MoviePopUp(props) {
                     )}
                   </div>
 
-                  <Fade bottom>
-                    <div className="p-5 py-4 -mb-6 mt-2 sm:mb-0 sm:mt-0 sm:py-0 sm:pt-6 rounded-t">
-                      <h3 className="text-3xl font-semibold text-white">
-                        {PopupInfo.title || PopupInfo.name}
-                      </h3>
-                      <h1 className="text-green-700 font-bold mt-2">
-                        {PopupInfo.release_date}
-                      </h1>
-                    </div>
-                  </Fade>
+                  <div className="p-5 py-4 -mb-6 mt-2 sm:mb-0 sm:mt-0 sm:py-0 sm:pt-6 rounded-t">
+                    <h3 className="text-3xl font-semibold text-white">
+                      {PopupInfo.title || PopupInfo.name}
+                    </h3>
+                    <h1 className="text-green-700 font-bold mt-2">
+                      {PopupInfo.release_date}
+                    </h1>
+                  </div>
                   {/*body*/}
-                  <Fade bottom>
-                    <div className="relative p-4 sm:p-6 flex-auto">
-                      <div className="bg-neutral-700 h-[0.125rem]"></div>
-                      <p className="my-4 sm:my-7 text-neutral-400 text-xs md:text-lg leading-relaxed line-clamp-4 sm:line-clamp-none">
-                        {PopupInfo.overview}
-                      </p>
-                      <div className="bg-neutral-700 h-[0.125rem]"></div>
-                    </div>
-                  </Fade>
+                  <div className="relative p-4 sm:p-6 flex-auto">
+                    <div className="bg-neutral-700 h-[0.125rem]"></div>
+                    <p className="my-4 sm:my-7 text-neutral-400 text-xs md:text-lg leading-relaxed line-clamp-4 sm:line-clamp-none">
+                      {PopupInfo.overview}
+                    </p>
+                    <div className="bg-neutral-700 h-[0.125rem]"></div>
+                  </div>
                   {/*footer*/}
                   <div className="sm:flex items-center justify-end p-2 rounded-b">
                     {/*More Info*/}
-                    <Fade bottom>
-                      <div className="relative p-2 py-5 sm:p-6 flex-auto">
-                        <h1 className="flex -mt-4 text-neutral-400 text-sm leading-relaxed">
-                          Rating :
-                          <div className="ml-2">
-                            {PopupInfo.vote_average && (
-                              <StarRatings
-                                rating={PopupInfo.vote_average / 2}
-                                starRatedColor="red"
-                                numberOfStars={5}
-                                name="rating"
-                                starDimension="1rem"
-                                starSpacing="0.2rem"
-                              />
-                            )}
-                          </div>
-                        </h1>
-                        <h1 className="flex text-neutral-400 text-sm leading-relaxed">
-                          Released on :{"  "}
-                          <p className="text-white ml-2 font-medium">
-                            {PopupInfo.release_date || PopupInfo.first_air_date}
-                          </p>
-                        </h1>
-                        <h1 className="flex text-neutral-400 text-sm leading-relaxed">
-                          Language :
-                          <p className="text-white ml-2 font-medium">
-                            {PopupInfo.original_language}
-                          </p>
-                        </h1>
+                    <div className="relative p-2 py-5 sm:p-6 flex-auto">
+                      <h1 className="flex -mt-4 text-neutral-400 text-sm leading-relaxed">
+                        Rating :
+                        <div className="ml-2">
+                          {PopupInfo.vote_average && (
+                            <StarRatings
+                              rating={PopupInfo.vote_average / 2}
+                              starRatedColor="red"
+                              numberOfStars={5}
+                              name="rating"
+                              starDimension="1rem"
+                              starSpacing="0.2rem"
+                            />
+                          )}
+                        </div>
+                      </h1>
+                      <h1 className="flex text-neutral-400 text-sm leading-relaxed">
+                        Released on :{"  "}
+                        <p className="text-white ml-2 font-medium">
+                          {PopupInfo.release_date || PopupInfo.first_air_date}
+                        </p>
+                      </h1>
+                      <h1 className="flex text-neutral-400 text-sm leading-relaxed">
+                        Language :
+                        <p className="text-white ml-2 font-medium">
+                          {PopupInfo.original_language}
+                        </p>
+                      </h1>
 
-                        <h1 className="flex text-neutral-400 text-sm leading-relaxed">
-                          Genere :
-                          {PopupInfo.genre_ids &&
-                            convertGenere(PopupInfo.genre_ids).map((genere) => {
-                              return (
-                                <span className="text-white ml-2 font-medium">
-                                  {genere}
-                                </span>
-                              );
-                            })}
-                        </h1>
-                      </div>
-                    </Fade>
+                      <h1 className="flex text-neutral-400 text-sm leading-relaxed">
+                        Genere :
+                        {PopupInfo.genre_ids &&
+                          convertGenere(PopupInfo.genre_ids).map((genere) => {
+                            return (
+                              <span className="text-white ml-2 font-medium">
+                                {genere}
+                              </span>
+                            );
+                          })}
+                      </h1>
+                    </div>
 
                     <div className="flex justify-between p-2">
                       {props.from === "MyList" ? (
@@ -287,7 +279,6 @@ function MoviePopUp(props) {
                     </div>
                   </div>
                 </div>
-              </Fade>
             </div>
           </div>
           <div className="opacity-40 fixed inset-0 z-40 bg-black"></div>

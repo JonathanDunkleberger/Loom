@@ -1,4 +1,4 @@
-import { API_KEY } from "../Constants/Constance";
+import { API_KEY } from "../Constants/Constants";
 export const TopRated = `/movie/top_rated?api_key=${API_KEY}&language=en-US`;
 export const originals = `discover/tv?api_key=${API_KEY}&with_networks=213&sort_by=popularity.desc&language=en-US`;
 export const action = `discover/movie?api_key=${API_KEY}&with_genres=28`;

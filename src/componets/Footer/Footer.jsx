@@ -24,7 +24,7 @@ function Footer2() {
           </ul>
           <div className={styles.security}>
             <div>Engligh</div>
-            <span>© 1997-2024 Netflix, Inc.</span>
+            <span>© 2025 Loom, Inc.</span>
           </div>
         </div>
       </footer>

@@ -1,6 +1,6 @@
 import React from "react";
 import { useState, useContext } from "react";
-import { API_KEY, imageUrl2 } from "../Constants/Constance";
+import { API_KEY, imageUrl2 } from "../Constants/Constants";
 import { PopUpContext } from "../Context/moviePopUpContext";
 import useUpdateMylist from "../CustomHooks/useUpdateMylist";
 import axios from "../axios";

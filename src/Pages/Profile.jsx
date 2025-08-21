@@ -8,7 +8,6 @@ import {
   getStorage,
 } from "firebase/storage";
 import { useNavigate } from "react-router-dom";
-import { Fade } from "react-reveal";
 import toast, { Toaster } from "react-hot-toast";
 
 import { AuthContext } from "../Context/UserContext";
@@ -151,8 +150,8 @@ function Profile() {
               },
             }}
           />
-        ) : null}
-        <Fade>
+  ) : null}
+  <div>
           <div className="bg-[#000000bf] p-5 md:p-12 rounded-md">
             <h1 className="text-4xl text-white font-bold mb-4 md:mb-8">
               Edit your Profile
@@ -260,7 +259,6 @@ function Profile() {
                 ) : null}
               </div>
             </div>
-            <div className="flex justify-between mt-4">
               <button
                 onClick={SignOut}
                 className="flex items-center border-[0.7px] border-white text-white font-medium sm:font-bold text-xs px-14 md:px-24 md:text-xl  py-3 rounded shadow hover:shadow-lg hover:bg-white hover:border-white hover:text-red-700 outline-none focus:outline-none mr-3 mb-1 ease-linear transition-all duration-150"
@@ -325,8 +323,7 @@ function Profile() {
                 </button>
               )}
             </div>
-          </div>
-        </Fade>
+        </div>
       </div>
     </div>
   );

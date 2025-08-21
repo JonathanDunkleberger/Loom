@@ -1,4 +1,4 @@
-import { genresList } from "../Constants/Constance";
+import { genresList } from "../Constants/Constants";
 
 const useGenereConverter = () => {
   const convertGenere = (genreIds) => {

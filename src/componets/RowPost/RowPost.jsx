@@ -2,9 +2,8 @@ import React from "react";
 import { useEffect, useState } from "react";
 
 import axios from "../../axios";
-import { imageUrl, imageUrl2, API_KEY } from "../../Constants/Constance";
+import { imageUrl, imageUrl2, API_KEY } from "../../Constants/Constants";
 import useUpdateMylist from "../../CustomHooks/useUpdateMylist";
-import { Fade } from "react-reveal";
 import YouTube from "react-youtube";
 import StarRatings from "react-star-ratings";
 
@@ -147,7 +146,7 @@ function RowPost(props) {
                     </>
                   )}
                   <div className="content pt-16">
-                    <Fade bottom duration={300}>
+                      <>
                       <div className="flex transition ml-3 ease-in-out delay-150">
                         <div
                           onClick={() => playMovie(obj)}
@@ -289,7 +288,7 @@ function RowPost(props) {
                             </span>
                           );
                         })}
-                    </Fade>
+                    </>
                   </div>
                 </SwiperSlide>
               );
