@@ -9,21 +9,21 @@ function Footer2() {
           <div className={styles.icons}></div>
           <ul className={styles.details}>
             <li>FAQ</li>
-            <li>Investor Relations</li>
-            <li>Privacy</li>
-            <li>Speed Test</li>
             <li>Help Center</li>
-            <li>Jobs</li>
-            <li>Cookie Preference</li>
-            <li>Legal Notices</li>
-            <li>Account</li>
-            <li>Ways to Watch</li>
-            <li>Corporate Information</li>
-            <li>iOS</li>
-            <li>Android</li>
+            <li>Privacy</li>
+            <li>Terms</li>
+            <li>Contact</li>
+            <li>About Loom</li>
+            <li>Roadmap</li>
+            <li>Status</li>
+            <li>Developers</li>
+            <li>Changelog</li>
+            <li>Guides</li>
+            <li>iOS (coming soon)</li>
+            <li>Android (coming soon)</li>
           </ul>
           <div className={styles.security}>
-            <div>Engligh</div>
+            <div>English</div>
             <span>© 2025 Loom, Inc.</span>
           </div>
         </div>

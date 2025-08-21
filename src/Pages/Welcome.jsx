@@ -21,23 +21,22 @@ function Welcome() {
   <div className="h-[32rem] w-full sm:h-[65vh] xl:h-[80vh] bg-[#15202B] relative">
         <div className="grid content-center justify-center h-full justify-items-center">
           <div className="w-10/12 text-center sm:w-11/12 md:w-40rem">
-              <>
+            <>
               <h1 className="mb-3 text-3xl font-semibold text-center text-white sm:text-4xl md:text-6xl">
-                Unlimited movies, TV shows and more.
+                Your unified hub for every story you love.
               </h1>
-              <h1 className="mb-4 text-xl text-center text-stone-400 font-light sm:text-2xl">
-                Watch anywahere.Cancel anytime
-              </h1>
-              <h1 className="mb-2 text-center text-stone-400 font-light sm:text-xl sm:mb-8">
-                Ready to watch? Enter your email to create or restart your
-                membership.
-              </h1>
+              <h2 className="mb-4 text-xl text-center text-stone-400 font-light sm:text-2xl">
+                Loom is a single, unified hub for enthusiasts to discover, track, and deeply explore all their favorite media.
+              </h2>
+              <h3 className="mb-2 text-center text-stone-400 font-light sm:text-xl sm:mb-8">
+                Moving beyond standard aggregators, Loom integrates movies, TV shows, anime, video games, and books into a seamless experience.
+              </h3>
               <div>
                 <input
                   placeholder="Email Address"
                   className="w-full p-2 py-3 rounded-sm sm:py-4 md:py-5 md:w-3/4"
                 />
-                <Link to={"/signup"}>
+                <Link to={'/signup'}>
                   <button className="px-4 py-2 mt-3 font-medium text-white bg-primary rounded-sm sm:py-4 md:mt-0 md:pb-5 md:text-xl md:w-1/4">
                     Get Started
                   </button>
@@ -61,12 +60,11 @@ function Welcome() {
             <div className="lg:flex lg:items-center lg:w-9/12">
               <div>
                 <h1 className="mt-2 mb-6 text-4xl font-semibold text-center text-white lg:mt-0 lg:text-left lg:ml-8 lg:text-5xl xl:text-6xl">
-                  Enjoy on your TV.
+                  Discover across media.
                 </h1>
-                <h1 className="m-4 text-center text-stone-400 font-light lg:text-left lg:ml-8 lg:text-2xl lg:w-9/12">
-                  Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV,
-                  Blu-ray players and more.
-                </h1>
+                <h2 className="m-4 text-center text-stone-400 font-light lg:text-left lg:ml-8 lg:text-2xl lg:w-9/12">
+                  Explore connected worlds: films, series, anime, games, and books—together in one place.
+                </h2>
               </div>
               <div className="flex justify-center">
                 <img className="" src={WelcomePageImage1} />
@@ -85,12 +83,11 @@ function Welcome() {
               </div>
               <div>
                 <h1 className="mx-4 mt-4 mb-6 text-4xl font-semibold text-center text-white lg:mt-0 lg:text-left lg:ml-8 lg:text-5xl xl:text-6xl">
-                  Download your shows to watch offline.
+                  Track and curate your universe.
                 </h1>
-                <h1 className="m-4 text-center text-stone-400 font-light lg:text-left lg:ml-8 lg:text-2xl lg:w-9/12">
-                  Save your favourites easily and always have something to
-                  watch.
-                </h1>
+                <h2 className="m-4 text-center text-stone-400 font-light lg:text-left lg:ml-8 lg:text-2xl lg:w-9/12">
+                  Build lists, mark progress, and keep your entire media life organized—across formats.
+                </h2>
               </div>
             </div>
           </div>
@@ -103,12 +100,11 @@ function Welcome() {
             <div className="lg:flex lg:items-center lg:w-9/12">
               <div>
                 <h1 className="mt-4 mb-6 text-4xl font-semibold text-center text-white lg:mt-0 lg:text-left lg:ml-8 lg:text-5xl xl:text-6xl">
-                  Watch everywhere.
+                  Insights tailored to your taste.
                 </h1>
-                <h1 className="m-4 text-center text-stone-400 font-light lg:text-left lg:ml-8 lg:text-2xl lg:w-9/12">
-                  Stream unlimited movies and TV shows on your phone, tablet,
-                  laptop, and TV.
-                </h1>
+                <h2 className="m-4 text-center text-stone-400 font-light lg:text-left lg:ml-8 lg:text-2xl lg:w-9/12">
+                  Coming soon: taste profiles, associations, and on‑demand recommendations—like a Spotify Wrapped for your media.
+                </h2>
               </div>
               <div className="flex justify-center">
                 <img className="" src={WelcomePageImage3} />
@@ -126,12 +122,11 @@ function Welcome() {
               </div>
               <div>
                 <h1 className="mt-4 mb-6 text-4xl font-semibold text-center text-white lg:mt-0 lg:text-left lg:ml-8 lg:text-5xl xl:text-6xl">
-                  Create profiles for children.
+                  One account. Endless exploration.
                 </h1>
-                <h1 className="m-4 text-center text-stone-400 font-light lg:text-left lg:ml-8 lg:text-2xl lg:w-9/12">
-                  Send children on adventures with their favourite characters in
-                  a space made just for them—free with your membership.
-                </h1>
+                <h2 className="m-4 text-center text-stone-400 font-light lg:text-left lg:ml-8 lg:text-2xl lg:w-9/12">
+                  Your Library spans every medium you love—seamlessly.
+                </h2>
               </div>
             </div>
           </div>

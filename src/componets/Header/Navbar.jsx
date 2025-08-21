@@ -163,21 +163,13 @@ function Navbar(props) {
                         alt="Profile"
                       />
                     </Link>
-                    <ul class="absolute hidden text-white pt-1 -ml-32 group-hover:block transition ease-in-out delay-150">
-            <li>
+        <ul class="absolute hidden text-white pt-1 -ml-32 group-hover:block transition ease-in-out delay-150">
+      <li>
                         <Link
                           to={"/profile"}
               className="cursor-pointer rounded-t bg-stone-900 font-bold hover:border-l-4 hover:bg-gradient-to-r from-[#00A8E133] border-primary py-2 px-4 block whitespace-no-wrap transition ease-in-out delay-150"
                         >
                           Profile
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          to={"/signin"}
-              className="cursor-pointer bg-stone-900 font-semibold hover:border-l-4 hover:bg-gradient-to-r from-[#00A8E133] border-primary py-2 px-4 block whitespace-no-wrap transition ease-in-out delay-150"
-                        >
-                          Add another User
                         </Link>
                       </li>
                       <li>
@@ -284,11 +276,7 @@ function Navbar(props) {
                     </a>
                   </Link>
 
-                  <Link to={"/signin"}>
-                    <a className="block px-3 py-2 text-base font-medium text-gray-300 rounded-md hover:bg-primary hover:text-white">
-                      Add another user
-                    </a>
-                  </Link>
+                  {/** Removed: Add another user */}
 
                   <a
                     onClick={SignOut}
