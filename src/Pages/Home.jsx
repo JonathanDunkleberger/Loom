@@ -40,7 +40,7 @@ function Home() {
         <RowPost title="Animated" url={Animated} key={Animated}></RowPost>
         {watchedMovies.length != 0 ? (
           <RowPost
-            title="Watched Movies"
+            title="History"
             movieData={watchedMovies}
             key={"Watched Movies"}
           ></RowPost>
