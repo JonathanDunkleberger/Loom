@@ -67,7 +67,7 @@ function Navbar(props) {
             <div className="flex items-center justify-between h-16">
               <div className="flex items-center">
                 <div className="flex-shrink-0">{/* Logo swapped to text-based */}
-                  <Link to={'/'} className="block"><span className="text-2xl font-extrabold" style={{color:'#00A8E1'}}>Loom</span></Link>
+                  <Link to={'/'} className="block"><span className="text-2xl font-extrabold" style={{color:'#8b5cf6'}}>Loom</span></Link>
                 </div>
                 <div className="hidden md:block">
                   <div className="flex items-center ml-10 space-x-4">

@@ -27,7 +27,7 @@ function NavbarWithoutUser() {
       >
         <div className="w-9/12 md:w-11/12">
           <Link to={'/'} className="ml-8">
-            <span className="text-2xl font-extrabold" style={{color:'#00A8E1'}}>Loom</span>
+            <span className="text-2xl font-extrabold" style={{color:'#8b5cf6'}}>Loom</span>
           </Link>
         </div>
 

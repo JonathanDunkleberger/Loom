@@ -6,7 +6,7 @@ const Logo = () => {
     <Link to="/">
       <h1
         className="cursor-pointer select-none text-2xl font-extrabold"
-        style={{ color: '#00A8E1' }}
+        style={{ color: '#8b5cf6' }}
         aria-label="Loom Home"
       >
         Loom
