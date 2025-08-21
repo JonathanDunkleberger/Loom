@@ -125,8 +125,7 @@ function Welcome() {
       </section>
 
       {/* Section 5 */}
-      <section className="bg-black">
-        <Fade>
+  <section className="bg-black">
           <div className="flex justify-center">
             <div className="flex flex-col-reverse lg:flex-row lg:items-center lg:w-9/12">
               <div className="flex justify-center">
@@ -143,7 +142,6 @@ function Welcome() {
               </div>
             </div>
           </div>
-        </Fade>
       </section>
 
       {/* Section 6 */}
