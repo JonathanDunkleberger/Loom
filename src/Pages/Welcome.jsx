@@ -12,7 +12,6 @@ import { Link } from "react-router-dom";
 
 function Welcome() {
   useEffect(() => {
-    //alert("This is NOT REAL NETFLIX so don't Enter your REAL CREDENTIALS")
     const image1 = WelcomePageImage1;
   }, []);
 

@@ -163,7 +163,7 @@ function Profile() {
                     ? `${profilePic}`
                     : `https://www.citypng.com/public/uploads/preview/profile-user-round-red-icon-symbol-download-png-11639594337tco5j3n0ix.png`
                 }
-                alt="NETFLIX"
+                alt="Profile"
               />
               <div>
                 <hr className="mb-2 h-px bg-gray-500 border-0 dark:bg-gray-700"></hr>
@@ -212,11 +212,11 @@ function Profile() {
                   <img
                     onClick={() =>
                       updateProfilePic(
-                        "https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png"
+                        "https://avatars.githubusercontent.com/u/9919?v=4"
                       )
                     }
                     className="w-16 h-16 rounded-md cursor-pointer"
-                    src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png"
+                    src="https://avatars.githubusercontent.com/u/9919?v=4"
                   />
                   <img
                     onClick={() =>
