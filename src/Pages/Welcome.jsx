@@ -7,7 +7,6 @@ import WelcomePageImage1 from "../images/WelcomePageImage1.png";
 import WelcomePageImage2 from "../images/WelcomePageImage2.png";
 import WelcomePageImage3 from "../images/WelcomePageImage3.png";
 import WelcomePageImage4 from "../images/WelcomePageImage4.png";
-import WelcomePageBanner from "../images/WelcomePageBanner.jpg";
 
 import { Link } from "react-router-dom";
 
@@ -20,12 +19,7 @@ function Welcome() {
   return (
     <div>
       {/*Hero Section*/}
-      <div
-        style={{
-          background: `linear-gradient(0deg, hsl(0deg 0% 0% / 73%) 0%, hsl(0deg 0% 0% / 73%) 35%),url(${WelcomePageBanner})`,
-        }}
-        className="h-[32rem] w-full sm:h-[65vh] xl:h-[80vh] bg-slate-800 relative"
-      >
+  <div className="h-[32rem] w-full sm:h-[65vh] xl:h-[80vh] bg-[#15202B] relative">
         <div className="grid content-center justify-center h-full justify-items-center">
           <div className="w-10/12 text-center sm:w-11/12 md:w-40rem">
               <>
@@ -45,7 +39,7 @@ function Welcome() {
                   className="w-full p-2 py-3 rounded-sm sm:py-4 md:py-5 md:w-3/4"
                 />
                 <Link to={"/signup"}>
-                  <button className="px-4 py-2 mt-3 font-medium text-white bg-red-700 rounded-sm sm:py-4 md:mt-0 md:pb-5 md:text-xl md:w-1/4">
+                  <button className="px-4 py-2 mt-3 font-medium text-white bg-primary rounded-sm sm:py-4 md:mt-0 md:pb-5 md:text-xl md:w-1/4">
                     Get Started
                   </button>
                 </Link>

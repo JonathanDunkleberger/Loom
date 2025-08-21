@@ -74,7 +74,7 @@ function Banner(props) {
           <>
             {movie.title || movie.name ? (
               <>
-                <h1 className="text-white text-3xl font-semibold text-center mb-5 py-2 sm:text-left sm:text-5xl sm:border-l-8 pl-4 border-red-700 md:text-6xl lg:w-2/3 xl:w-1/2 sm:font-bold drop-shadow-lg">
+                <h1 className="text-white text-3xl font-semibold text-center mb-5 py-2 sm:text-left sm:text-5xl sm:border-l-8 pl-4 border-primary md:text-6xl lg:w-2/3 xl:w-1/2 sm:font-bold drop-shadow-lg">
                   {movie.title || movie.name}
                 </h1>
               </>
@@ -92,7 +92,7 @@ function Banner(props) {
                     <div className="-mt-1">
                       <StarRatings
                         rating={movie.vote_average / 2}
-                        starRatedColor="red"
+                        starRatedColor="#00A8E1"
                         numberOfStars={5}
                         name="rating"
                         starDimension="1.1rem"
@@ -139,7 +139,7 @@ function Banner(props) {
                 <>
                   <button
                     onClick={() => playMovie(movie)}
-                    className="bg-red-800 hover:bg-red-900 transition duration-500 ease-in-out shadow-2xl flex items-center mb-3 mr-3 text-base sm:text-xl font-semibold text-white py-2 sm:py-2 px-10 sm:px-14 rounded-md"
+                    className="bg-primary hover:bg-primary transition duration-500 ease-in-out shadow-2xl flex items-center mb-3 mr-3 text-base sm:text-xl font-semibold text-white py-2 sm:py-2 px-10 sm:px-14 rounded-md"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"

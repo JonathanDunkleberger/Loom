@@ -14,6 +14,9 @@ module.exports = {
       '3xl': '2200px',
     },
     extend: {
+      colors: {
+        primary: '#00A8E1',
+      },
       padding:{
         '85vh': '85vh',
         '50vh': '50vh',

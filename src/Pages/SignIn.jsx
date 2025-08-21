@@ -13,7 +13,6 @@ import { db } from "../Firebase/FirebaseConfig";
 import { AuthContext } from "../Context/UserContext";
 
 import GoogleLogo from "../images/GoogleLogo.png";
-import WelcomePageBanner from "../images/WelcomePageBanner.jpg";
 
 function SignIn() {
   const { User, setUser } = useContext(AuthContext);
@@ -115,12 +114,7 @@ function SignIn() {
   };
 
   return (
-    <section
-      className="h-[100vh] bg-gray-50 dark:bg-gray-900"
-      style={{
-        background: `linear-gradient(0deg, hsl(0deg 0% 0% / 73%) 0%, hsl(0deg 0% 0% / 73%) 35%),url(${WelcomePageBanner})`,
-      }}
-    >
+    <section className="h-[100vh] bg-[#15202B]">
       <div className="h-[100vh] flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
   <div className="w-full bg-[#000000a2] rounded-lg shadow sm:my-0 md:mt-0 sm:max-w-lg xl:p-0 border-2 border-stone-800 lg:border-0">
             <div>
@@ -128,9 +122,7 @@ function SignIn() {
                 <h1 className="text-xl font-bold leading-tight tracking-tight text-white md:text-2xl dark:text-white">
                   Sign in to your account
                 </h1>
-                <h1 className="text-white text-2xl p-3 text-center border-2 border-red-700 rounded-sm">
-                  Not Real Netflix
-                </h1>
+                {/* removed Not Real Netflix element per rebrand */}
                 <form
                   onSubmit={handleSubmit}
                   className="space-y-4 md:space-y-6"
@@ -149,7 +141,7 @@ function SignIn() {
                       id="email"
                       className={
                         ErrorMessage
-                          ? "bg-stone-700 text-white sm:text-sm rounded-sm focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 border-2 border-red-700  dark:placeholder-white dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 placeholder:text-white"
+                          ? "bg-stone-700 text-white sm:text-sm rounded-sm focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 border-2 border-primary  dark:placeholder-white dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 placeholder:text-white"
                           : "bg-stone-700 text-white sm:text-sm rounded-sm focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:placeholder-white dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 placeholder:text-white"
                       }
                       placeholder="name@email.com"
@@ -171,7 +163,7 @@ function SignIn() {
                       placeholder="••••••••"
                       className={
                         ErrorMessage
-                          ? "bg-stone-700 text-white sm:text-sm rounded-sm focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5  border-2 border-red-700 dark:bg-gray-700 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 placeholder:text-white"
+                          ? "bg-stone-700 text-white sm:text-sm rounded-sm focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5  border-2 border-primary dark:bg-gray-700 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 placeholder:text-white"
                           : "bg-stone-700 text-white sm:text-sm rounded-sm focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 placeholder:text-white"
                       }
                       required=""
@@ -180,7 +172,7 @@ function SignIn() {
                   </div>
                   <div>
                     {ErrorMessage && (
-                      <h1 className="flex text-white font-bold p-4 bg-red-700 rounded text-center">
+                      <h1 className="flex text-white font-bold p-4 bg-primary rounded text-center">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           fill="none"
@@ -222,13 +214,13 @@ function SignIn() {
                   </div>
                   <button
                     type="submit"
-                    className={`w-full text-white ${
+          className={`w-full text-white ${
                       loader
                         ? `bg-stone-700`
-                        : `bg-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-primary-300`
+            : `bg-primary hover:bg-primary focus:ring-4 focus:outline-none focus:ring-primary-300`
                     } transition ease-in-out font-medium rounded-sm text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800`}
                   >
-                    {loader ? <ClipLoader color="#ff0000" /> : `Sign in`}
+          {loader ? <ClipLoader color="#ffffff" /> : `Sign in`}
                   </button>
                   <button
                     onClick={loginWithGoogle}
@@ -239,7 +231,7 @@ function SignIn() {
                     } transition ease-in-out font-medium rounded-sm text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:focus:ring-primary-800`}
                   >
                     {loader ? (
-                      <ClipLoader color="#ff0000" />
+                      <ClipLoader color="#ffffff" />
                     ) : (
                       <>
                         <img className="w-8" src={GoogleLogo}></img>{" "}

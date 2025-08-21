@@ -5,7 +5,7 @@ function Loading() {
   return (
     <div>
       <div className="w-full h-screen flex justify-center items-center">
-        <ClipLoader color="#ff0000" size={160} />
+  <ClipLoader color="#ffffff" size={160} />
       </div>
     </div>
   );

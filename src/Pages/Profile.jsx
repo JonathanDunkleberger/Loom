@@ -11,7 +11,7 @@ import { useNavigate } from "react-router-dom";
 import toast, { Toaster } from "react-hot-toast";
 
 import { AuthContext } from "../Context/UserContext";
-import WelcomePageBanner from "../images/WelcomePageBanner.jpg";
+// Background banner removed for Loom rebrand
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -134,12 +134,7 @@ function Profile() {
 
   return (
     <div>
-      <div
-        className="flex h-screen justify-center items-center"
-        style={{
-          backgroundImage: `linear-gradient(0deg, hsl(0deg 0% 0% / 73%) 0%, hsl(0deg 0% 0% / 73%) 35%), url(${WelcomePageBanner})`,
-        }}
-      >
+  <div className="flex h-screen justify-center items-center bg-[#15202B]">
         {isMyListUpdated ? (
           <Toaster
             toastOptions={{
@@ -261,7 +256,7 @@ function Profile() {
             </div>
               <button
                 onClick={SignOut}
-                className="flex items-center border-[0.7px] border-white text-white font-medium sm:font-bold text-xs px-14 md:px-24 md:text-xl  py-3 rounded shadow hover:shadow-lg hover:bg-white hover:border-white hover:text-red-700 outline-none focus:outline-none mr-3 mb-1 ease-linear transition-all duration-150"
+                className="flex items-center border-[0.7px] border-white text-white font-medium sm:font-bold text-xs px-14 md:px-24 md:text-xl  py-3 rounded shadow hover:shadow-lg hover:bg-white hover:border-white hover:text-primary outline-none focus:outline-none mr-3 mb-1 ease-linear transition-all duration-150"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -282,7 +277,7 @@ function Profile() {
               {userName != "" || newProfielPic != "" ? (
                 <button
                   onClick={changeUserName}
-                  className="flex items-center bg-red-700 text-white font-medium sm:font-bold text-xs px-10 md:px-16 md:text-xl  py-3 rounded shadow hover:shadow-lg hover:bg-white hover:text-red-700 outline-none focus:outline-none mr-3 mb-1 ease-linear transition-all duration-150"
+                  className="flex items-center bg-primary text-white font-medium sm:font-bold text-xs px-10 md:px-16 md:text-xl  py-3 rounded shadow hover:shadow-lg hover:bg-white hover:text-primary outline-none focus:outline-none mr-3 mb-1 ease-linear transition-all duration-150"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -303,7 +298,7 @@ function Profile() {
               ) : (
                 <button
                   onClick={() => navigate("/")}
-                  className="flex items-center bg-red-700 text-white font-medium sm:font-bold text-xs px-10 md:px-16 md:text-xl  py-3 rounded shadow hover:shadow-lg hover:bg-white hover:text-red-700 outline-none focus:outline-none mr-3 mb-1 ease-linear transition-all duration-150"
+                  className="flex items-center bg-primary text-white font-medium sm:font-bold text-xs px-10 md:px-16 md:text-xl  py-3 rounded shadow hover:shadow-lg hover:bg-white hover:text-primary outline-none focus:outline-none mr-3 mb-1 ease-linear transition-all duration-150"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"

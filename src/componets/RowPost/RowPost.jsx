@@ -133,7 +133,7 @@ function RowPost(props) {
                         loading="lazy"
                         className={
                           props.movieData != null
-                            ? "border-b-4 border-red-700 rounded-sm"
+                            ? "border-b-4 border-primary rounded-sm"
                             : "rounded-sm"
                         }
                         src={
@@ -272,7 +272,7 @@ function RowPost(props) {
                       <div className="ml-4">
                         <StarRatings
                           rating={obj.vote_average / 2}
-                          starRatedColor="red"
+                          starRatedColor="#00A8E1"
                           numberOfStars={5}
                           name="rating"
                           starDimension="0.8rem"
@@ -345,7 +345,7 @@ function RowPost(props) {
 
                     <div className="flex ml-4 items-center -mt-14">
                       <button
-                        className="flex items-center justify-center bg-red-800 text-white active:bg-red-800 font-medium sm:font-bold uppercase text-xs px-4 sm:px-6 md:text-sm  py-2 rounded shadow hover:shadow-lg cursor-pointer outline-none focus:outline-none mr-3 mb-1 ease-linear transition-all duration-150"
+                        className="flex items-center justify-center bg-primary text-white active:bg-primary font-medium sm:font-bold uppercase text-xs px-4 sm:px-6 md:text-sm  py-2 rounded shadow hover:shadow-lg cursor-pointer outline-none focus:outline-none mr-3 mb-1 ease-linear transition-all duration-150"
                         type="button"
                         onClick={() => {
                           playMovie(moviePopupInfo);
@@ -430,7 +430,7 @@ function RowPost(props) {
                           <div className="ml-2">
                             <StarRatings
                               rating={moviePopupInfo.vote_average / 2}
-                              starRatedColor="red"
+                              starRatedColor="#00A8E1"
                               numberOfStars={5}
                               name="rating"
                               starDimension="1rem"
@@ -468,13 +468,13 @@ function RowPost(props) {
 
                       <div className="flex justify-between p-2">
                         <button
-                          className="group flex items-center justify-center border-[0.7px] border-white text-white font-medium sm:font-bold text-xs px-4 mr-4 sm:px-6 md:text-sm  py-3 rounded shadow hover:shadow-lg hover:bg-white hover:text-red-700 outline-none focus:outline-none mb-1 ease-linear transition-all duration-150"
+                          className="group flex items-center justify-center border-[0.7px] border-white text-white font-medium sm:font-bold text-xs px-4 mr-4 sm:px-6 md:text-sm  py-3 rounded shadow hover:shadow-lg hover:bg-white hover:text-primary outline-none focus:outline-none mb-1 ease-linear transition-all duration-150"
                           type="button"
                           onClick={() => addToMyList(moviePopupInfo)}
                         >
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
-                            className="h-6 w-6 mr-1 text-white hover:text-red-700 group-hover:text-red-700 ease-linear transition-all duration-150"
+                            className="h-6 w-6 mr-1 text-white hover:text-primary group-hover:text-primary ease-linear transition-all duration-150"
                             fill="none"
                             viewBox="0 0 24 24"
                             stroke="currentColor"
@@ -490,7 +490,7 @@ function RowPost(props) {
                         </button>
 
                         <button
-                          className="flex items-center text-red-500 background-transparent font-medium sm:font-bold uppercase px-2 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                          className="flex items-center text-primary background-transparent font-medium sm:font-bold uppercase px-2 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                           type="button"
                           onClick={() => setShowModal(false)}
                         >
