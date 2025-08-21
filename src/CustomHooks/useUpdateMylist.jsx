@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import { updateDoc, doc, arrayUnion, arrayRemove } from "firebase/firestore";
+import { setDoc, doc, arrayUnion, arrayRemove } from "firebase/firestore";
 import { db } from "../Firebase/FirebaseConfig";
 import { AuthContext } from "../Context/UserContext";
 import toast, { Toaster } from "react-hot-toast";
@@ -15,30 +15,36 @@ function useUpdateMylist() {
     toast.error(message);
   }
 
-  const addToMyList = (movie) => {
-    updateDoc(doc(db, "MyList", User.uid), { movies: arrayUnion(movie) })
-      .then(() => {
-        console.log("Data added to my List");
-        notify();
-        setisMyListUpdates(true);
-      })
-      .catch((error) => {
-        console.log(error.code);
-        console.log(error.message);
-        alertError(error.message);
-      });
+  const addToMyList = async (movie) => {
+    try {
+      await setDoc(
+        doc(db, "MyList", User.uid),
+        { movies: arrayUnion(movie) },
+        { merge: true }
+      );
+      console.log("Data added to MyList (setDoc merge)");
+      notify();
+      setisMyListUpdates(true);
+    } catch (error) {
+      console.log(error.code);
+      console.log(error.message);
+      alertError(error.message);
+    }
   };
 
-  const removeFromMyList = (movie) => {
-    updateDoc(doc(db, "MyList", User.uid), { movies: arrayRemove(movie) })
-      .then(() => {
-        toast.success(" Movie removed from MyList  ");
-        setisMyListUpdates(true);
-      })
-      .catch((error) => {
-        console.log(error.code);
-        console.log(error.message);
-      });
+  const removeFromMyList = async (movie) => {
+    try {
+      await setDoc(
+        doc(db, "MyList", User.uid),
+        { movies: arrayRemove(movie) },
+        { merge: true }
+      );
+      toast.success(" Movie removed from MyList  ");
+      setisMyListUpdates(true);
+    } catch (error) {
+      console.log(error.code);
+      console.log(error.message);
+    }
   };
 
   const PopupMessage = (

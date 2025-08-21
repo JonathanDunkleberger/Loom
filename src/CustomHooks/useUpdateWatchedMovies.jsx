@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import { updateDoc, doc, arrayUnion, arrayRemove } from "firebase/firestore";
+import { setDoc, doc, arrayUnion, arrayRemove } from "firebase/firestore";
 import { db } from "../Firebase/FirebaseConfig";
 import { AuthContext } from "../Context/UserContext";
 import toast, { Toaster } from "react-hot-toast";
@@ -14,25 +14,35 @@ function useUpdateWatchedMovies() {
   function alertError(message) {
     toast.error(message);
   }
-  const addToWatchedMovies = (movie) => {
-    updateDoc(doc(db, "WatchedMovies", User.uid), {
-      movies: arrayUnion(movie),
-    });
+  const addToWatchedMovies = async (movie) => {
+    try {
+      await setDoc(
+        doc(db, "WatchedMovies", User.uid),
+        { movies: arrayUnion(movie) },
+        { merge: true }
+      );
+    } catch (error) {
+      console.log(error.code);
+      console.log(error.message);
+      alertError(error.message);
+      setError(true);
+    }
   };
 
-  const removeFromWatchedMovies = (movie) => {
-    updateDoc(doc(db, "WatchedMovies", User.uid), {
-      movies: arrayRemove(movie),
-    })
-      .then(() => {
-        notify();
-      })
-      .catch((error) => {
-        console.log(error.code);
-        console.log(error.message);
-        alertError(error.message);
-        setError(true);
-      });
+  const removeFromWatchedMovies = async (movie) => {
+    try {
+      await setDoc(
+        doc(db, "WatchedMovies", User.uid),
+        { movies: arrayRemove(movie) },
+        { merge: true }
+      );
+      notify();
+    } catch (error) {
+      console.log(error.code);
+      console.log(error.message);
+      alertError(error.message);
+      setError(true);
+    }
   };
 
   const removePopupMessage = (
