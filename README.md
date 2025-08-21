@@ -1,14 +1,34 @@
-# Loom - A Unified Media Hub
+# Loom - A Unified Media Hub 🎬📚🎮
 
-## Overview
+## Overview ✨
+
 Loom is an evolving platform that unifies all your media interests—movies, TV, anime, video games, and books—into one intelligent hub. Instead of juggling multiple apps and lists, Loom lets enthusiasts discover, track, and explore everything from cinematic universes and franchise timelines to game completion stats and author bibliographies.
 
-## Vision
+## Vision 🎯
+
 Create the most insightful, cross‑media discovery engine. Loom will understand relationships across formats (e.g., "If you enjoyed this cyberpunk RPG, read this graphic novel"), surface deep metadata (time to beat, genres, themes, platforms, ISBN links, release chronology), and maintain a single, personalized Library & Queue spanning every medium you care about.
 
-## Key Functionalities
+## Quick start 🔧
 
-Current (MVP foundation):
+1) Copy env file 🔑: duplicate `.env.example` to `.env` and fill in your real values. Vite only exposes variables prefixed with `VITE_`.
+
+2) Install and run 🚀: install dependencies and start the dev server.
+
+Notes:
+
+- Keep `.env` out of version control (already ignored). Never commit secrets.
+- For deployment (e.g., Vercel), add the same `VITE_*` keys in your dashboard.
+
+## Environment variables 🔑
+
+All required keys are listed in `.env.example`. Copy it to `.env` and replace the placeholder values:
+
+- Firebase: `VITE_FIREBASE_API_KEY`, `VITE_FIREBASE_AUTH_DOMAIN`, `VITE_FIREBASE_PROJECT_ID`, `VITE_FIREBASE_STORAGE_BUCKET`, `VITE_FIREBASE_MESSAGING_SENDER_ID`, `VITE_FIREBASE_APP_ID`, `VITE_FIREBASE_MEASUREMENT_ID`
+- TMDB: `VITE_TMDB_API_KEY`, `VITE_TMDB_BASE_URL`, `VITE_TMDB_IMAGE_URL`
+
+## Key Functionalities 🧩
+
+Current (MVP foundation) ✅
 
 - Auth: Sign In / Sign Up (Firebase)
 - Browse & search screen media (movies / series) via TMDB
@@ -16,7 +36,7 @@ Current (MVP foundation):
 - Detail & playback launch pages (trailers / external sources)
 - Profile & basic activity history
 
-Planned / In Progress:
+Planned / In Progress 🚧
 
 - Cross‑media Library (movies | series | anime | games | books)
 - Smart unified queue & backlog prioritization
@@ -32,19 +52,18 @@ Planned / In Progress:
 - Social layer (optional): share lists, compare overlap, lightweight activity feed
 - Offline-friendly PWA shell & optimistic syncing
 
-## Technologies Used
+## Technologies Used 🛠️
 
-Current Stack:
+Current Stack 🧰
 
 - React (migrating toward Next.js 14+)
 - JavaScript (transition path to TypeScript)
 - Firebase (Auth, Firestore)
 - TMDB API (screen media data)
-- Axios
 - Tailwind CSS + SCSS modules
 - Swiper.js / react-youtube (media UI components)
 
-Target / Planned Stack Enhancements:
+Target / Planned Stack Enhancements 🔭
 
 - Next.js 14+ (App Router, Server Actions, Image Optimization)
 - TypeScript everywhere (strict mode)
@@ -54,7 +73,7 @@ Target / Planned Stack Enhancements:
 - Testing: Vitest + Playwright (E2E) + Storybook for component docs
 - Analytics & telemetry abstractions
 
-Planned Data Sources & Integrations:
+Planned Data Sources & Integrations �
 
 - IGDB (video game catalog, via authenticated API)
 - Google Books API (books & series)
@@ -62,7 +81,7 @@ Planned Data Sources & Integrations:
 - HowLongToBeat (playtime aggregation – via compliant scraping/proxy or user-sourced data)
 - Open Library (fallback book metadata)
 
-## Roadmap (High-Level)
+## Roadmap (High-Level) 🗺️
 
 1. Stabilize current movie/series features & refactor to TypeScript
 2. Migrate to Next.js 14 (App Router) + introduce modular data layer
@@ -73,26 +92,26 @@ Planned Data Sources & Integrations:
 7. Social & sharing features
 8. Performance hardening, offline support, accessibility polish
 
-## Screenshots
+## Screenshots �️
 
 Placeholder: Updated multi-media UI previews coming soon.
 
-## Mobile Experience
+## Mobile Experience 📱
 
 Placeholder: Responsive mobile flows (Library, Detail, Queue) in design.
 
-## Description
+## Description �
 
 Loom is not just another streaming-style interface—it is a knowledge and tracking layer over your entire media life. By unifying disparate APIs and enriching them with user context, Loom aims to become the canonical source for what to watch, play, and read next—grounded in your taste, progress, and curiosity.
 
-## Live Link
+## Live Link �
 
 Coming soon (deployment pending rebrand & Next.js migration).
 
-## Contributing (Early Phase)
+## Contributing (Early Phase) 🤝
 
 Refactor & migration help is welcome once the Next.js + TypeScript branch is opened. Issue templates & contribution guidelines will be added before public contributions are enabled.
 
-## License
+## License 📄
 
 This repository inherits its existing license (see LICENSE). Future data-source specific compliance (TMDB, IGDB, Google Books) will be documented.
