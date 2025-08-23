@@ -16,7 +16,8 @@ export default async function handler(request, response) {
         'Client-ID': clientId,
         'Authorization': `Bearer ${accessToken}`,
       },
-      body: 'fields name, cover.image_id, summary, first_release_date, total_rating, genres.name, involved_companies.company.name; where total_rating > 85 & cover != null & summary != null; sort total_rating desc; limit 15;'
+      // UPDATED to ask for screenshots (for backdrop) and cover (for poster)
+      body: 'fields name, cover.image_id, screenshots.image_id, summary, first_release_date, total_rating, genres.name, involved_companies.company.name; where total_rating > 85 & cover != null & summary != null & screenshots != null; sort total_rating desc; limit 15;'
     });
 
     if (!igdbResponse.ok) {
@@ -24,12 +25,14 @@ export default async function handler(request, response) {
     }
 
     const rawGames = await igdbResponse.json();
-
+    
     const cleanGames = rawGames.map(game => ({
       id: game.id,
       type: 'game',
       title: game.name,
-      imageUrl: `https://images.igdb.com/igdb/image/upload/t_cover_big/${game.cover?.image_id}.jpg`,
+      // Map both image types
+      backdropUrl: `https://images.igdb.com/igdb/image/upload/t_screenshot_big/${game.screenshots[0]?.image_id}.jpg`,
+      posterUrl: `https://images.igdb.com/igdb/image/upload/t_cover_big/${game.cover?.image_id}.jpg`,
       description: game.summary,
       releaseDate: game.first_release_date ? new Date(game.first_release_date * 1000).getFullYear().toString() : 'N/A',
       rating: game.total_rating ? (game.total_rating / 10).toFixed(1) : 0,
