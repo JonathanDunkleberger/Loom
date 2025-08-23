@@ -4,7 +4,7 @@ import { API_KEY, imageUrl2 } from "../Constants/Constants";
 import { PopUpContext } from "../Context/moviePopUpContext";
 import useUpdateMylist from "../CustomHooks/useUpdateMylist";
 import axios from "../axios";
-import MoviePopUp from "../componets/PopUp/MoviePopUp";
+import MoviePopUp from "../components/PopUp/MoviePopUp";
 import usePlayMovie from "../CustomHooks/usePlayMovie";
 import useUpdateLikedMovies from "../CustomHooks/useUpdateLikedMovies";
 import useGenereConverter from "../CustomHooks/useGenereConverter";

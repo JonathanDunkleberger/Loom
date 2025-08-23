@@ -4,9 +4,9 @@ import React from "react";
 import { useEffect, useState, useContext } from "react";
 
 // YOUR EXISTING COMPONENTS AND SERVICES
-import Banner from "../componets/Banner/Banner";
-import Footer from "../componets/Footer/Footer";
-import RowPost from "../componets/RowPost/RowPost";
+import Banner from "../components/Banner/Banner";
+import Footer from "../components/Footer/Footer";
+import RowPost from "../components/RowPost/RowPost";
 import {
   originals,
   trending,

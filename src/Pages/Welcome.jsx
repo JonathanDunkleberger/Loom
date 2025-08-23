@@ -1,7 +1,7 @@
 import React from "react";
 import { useEffect } from "react";
 
-import Footer from "../componets/Footer/Footer";
+import Footer from "../components/Footer/Footer";
 
 import WelcomePageImage1 from "../images/WelcomePageImage1.png";
 import WelcomePageImage2 from "../images/WelcomePageImage2.png";
