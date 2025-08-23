@@ -114,4 +114,4 @@ Refactor & migration help is welcome once the Next.js + TypeScript branch is ope
 
 ## License 📄
 
-This repository inherits its existing license (see LICENSE). Future data-source specific compliance (TMDB, IGDB, Google Books) will be documented.
+This repository inherits its existing license (see LICENSE). Future data-source specific compliance (TMDB, IGDB, Google Books) will be documented. 
