@@ -9,27 +9,23 @@ import useUpdateWatchedMovies from "../../CustomHooks/useUpdateWatchedMovies";
 import useUpdateLikedMovies from "../../CustomHooks/useUpdateLikedMovies";
 import useGenereConverter from "../../CustomHooks/useGenereConverter";
 
-// Import your components
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper";
 // CORRECTED IMPORT PATH
-import MoviePopUp from "../MoviePopUp/MoviePopUp"; 
+import MoviePopUp from "../popup/MoviePopUp"; 
 
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "./RowPostStyles.scss";
 
 function RowPost(props) {
-  // All your hooks remain the same
   const { addToMyList, PopupMessage } = useUpdateMylist();
   const { playMovie } = usePlayMovie();
   const { removeFromWatchedMovies, removePopupMessage } = useUpdateWatchedMovies();
   const { addToLikedMovies, LikedMoviePopupMessage } = useUpdateLikedMovies();
   const { convertGenere } = useGenereConverter();
 
-  // All your state remains the same
   const [movies, setMovies] = useState([]);
   const [showModal, setShowModal] = useState(false);
   const [moviePopupInfo, setMoviePopupInfo] = useState({});
@@ -115,7 +111,6 @@ function RowPost(props) {
                   />
                   <div className="content pt-16">
                     <div className="flex transition ml-3 ease-in-out delay-150">
-                      {/* Interactive buttons */}
                     </div>
                     <h1 className="text-white ml-4 font-medium w-4/5 xl:line-clamp-1">
                       {itemTitle}
@@ -147,12 +142,10 @@ function RowPost(props) {
         </>
       ) : (
         <div className="animate-pulse">
-          {/* Loading skeleton */}
         </div>
       )}
 
-      {/* RENDER THE REUSABLE POP-UP COMPONENT */}
-      {showModal && <MoviePopUp data1={moviePopupInfo} />}
+      {showModal && <MoviePopUp data1={moviePopupInfo} from={props.from} />}
 
     </div>
   );
