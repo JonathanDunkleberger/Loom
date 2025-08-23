@@ -1,5 +1,5 @@
 import React from "react";
-import UserMovieSection from "../componets/UserMovieSection/UserMovieSection";
+import UserMovieSection from "../components/UserMovieSection/UserMovieSection";
 
 function LikedMovies() {
   return <UserMovieSection from="LikedMovies"></UserMovieSection>;

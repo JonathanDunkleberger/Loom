@@ -17,9 +17,9 @@ const History = lazy(() => import("./Pages/History"));
 import { Routes, Route, Navigate } from "react-router-dom";
 import { AuthContext } from "./Context/UserContext";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
-import Loading from "./componets/Loading/Loading";
-import Navbar from "./componets/Header/Navbar";
-import NavbarWithoutUser from "./componets/Header/NavbarWithoutUser";
+import Loading from "./components/Loading/Loading";
+import Navbar from "./components/Header/Navbar";
+import NavbarWithoutUser from "./components/Header/NavbarWithoutUser";
 
 function App() {
   const { User, setUser } = useContext(AuthContext);
