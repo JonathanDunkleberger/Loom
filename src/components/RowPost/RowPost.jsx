@@ -12,7 +12,8 @@ import useGenereConverter from "../../CustomHooks/useGenereConverter";
 // Import your components
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper";
-import MoviePopUp from "../MoviePopUp/MoviePopUp"; // IMPORT YOUR POP-UP COMPONENT
+// CORRECTED IMPORT PATH
+import MoviePopUp from "../MoviePopUp/MoviePopUp"; 
 
 // Import Swiper styles
 import "swiper/css";
